@@ -4,11 +4,10 @@ on:
   push:
   workflow_dispatch:
 
-
 jobs:
   hello:
     runs-on: ubuntu-24.04
     steps:
       - run: echo "Привет из Actions"
       - run: uname -a && python3 --version && docker --version
-      - run: echo "Коммит ${{ guthub.sha }} в ветке ${{ github.ref_name }} от {{ github.actor }}"
+      - run: echo "Коммит ${{ github.sha }} в ветке ${{ github.ref_name }} от ${{ github.actor }}"
