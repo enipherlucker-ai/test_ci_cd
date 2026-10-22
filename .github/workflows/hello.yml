@@ -11,3 +11,6 @@ jobs:
       - run: echo "Привет из Actions"
       - run: uname -a && python3 --version && docker --version
       - run: echo "Коммит ${{ github.sha }} в ветке ${{ github.ref_name }} от ${{ github.actor }}"
+      - run: echo "ТУТ ТАКОЙ ${{secrets.MY_SECRET}}
+        env:
+          MY_SECRETS: ${{ secrets.MY_SECRET }}
